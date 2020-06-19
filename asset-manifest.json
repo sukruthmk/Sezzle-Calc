@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sezzle-calc/static/css/main.a59d3e2f.chunk.css",
+    "main.js": "/sezzle-calc/static/js/main.272fafe2.chunk.js",
+    "main.js.map": "/sezzle-calc/static/js/main.272fafe2.chunk.js.map",
+    "runtime-main.js": "/sezzle-calc/static/js/runtime-main.ee808bf4.js",
+    "runtime-main.js.map": "/sezzle-calc/static/js/runtime-main.ee808bf4.js.map",
+    "static/js/2.d26eb7b4.chunk.js": "/sezzle-calc/static/js/2.d26eb7b4.chunk.js",
+    "static/js/2.d26eb7b4.chunk.js.map": "/sezzle-calc/static/js/2.d26eb7b4.chunk.js.map",
+    "index.html": "/sezzle-calc/index.html",
+    "precache-manifest.150a664d9bb0578dfcb14ed92b14ec9f.js": "/sezzle-calc/precache-manifest.150a664d9bb0578dfcb14ed92b14ec9f.js",
+    "service-worker.js": "/sezzle-calc/service-worker.js",
+    "static/css/main.a59d3e2f.chunk.css.map": "/sezzle-calc/static/css/main.a59d3e2f.chunk.css.map",
+    "static/js/2.d26eb7b4.chunk.js.LICENSE.txt": "/sezzle-calc/static/js/2.d26eb7b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ee808bf4.js",
+    "static/js/2.d26eb7b4.chunk.js",
+    "static/css/main.a59d3e2f.chunk.css",
+    "static/js/main.272fafe2.chunk.js"
+  ]
+}
