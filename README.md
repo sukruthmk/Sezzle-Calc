@@ -2,7 +2,7 @@
 
 A simple calculator app which logs calculations and shares with users connected to website.
 
-Live app: ![Sezzle Calculator](https://sukruthmk.com/Sezzle-Calc/)
+Live app: [Sezzle Calculator](https://sukruthmk.com/Sezzle-Calc/)
 
 ![Sezzle Calculator](demo/demo.gif)
 
