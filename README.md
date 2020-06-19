@@ -2,6 +2,10 @@
 
 A simple calculator app which logs calculations and shares with users connected to website.
 
+Live app: ![Sezzle Calculator](https://sukruthmk.com/Sezzle-Calc/)
+
+![Sezzle Calculator](demo/demo.gif)
+
 ## Running server
 
 Goto server directory and install node modules using `npm i`
@@ -22,7 +26,7 @@ This will run socket.io connection at port 4001
 npm i
 ```
 
-### start frontend app
+### Start frontend app
 
 ```shell
 yarn start
