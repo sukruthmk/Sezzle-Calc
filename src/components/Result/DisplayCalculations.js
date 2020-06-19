@@ -26,9 +26,9 @@ const DisplayCalculations = () => {
   const { calculations } = useContext(CalculatorContext);
   return (
     <MessageWrapper>
-      {calculations.slice(0, 10).map((data, i) => (
-        <MessageDisplay value={data.msg} key={i}>
-          {data.msg}
+      {calculations.slice(0, 10).map((calculation, i) => (
+        <MessageDisplay value={calculation} key={i}>
+          {calculation}
         </MessageDisplay>
       ))}
     </MessageWrapper>
