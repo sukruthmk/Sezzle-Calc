@@ -4,7 +4,7 @@ A simple calculator app which logs calculations and shares with users connected 
 
 ## Running server
 
-Goto server directory and install node module using `npm i`
+Goto server directory and install node modules using `npm i`
 
 Then run the server using this command
 
@@ -22,15 +22,19 @@ This will run socket.io connection at port 4001
 npm i
 ```
 
-### `yarn start`
+### start frontend app
+
+```shell
+yarn start
+```
 
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Config changes
 
-There are two endpoints in config.js
-SOCKET_ENDPOINT_DEV
+There are two endpoints in config.js  
+SOCKET_ENDPOINT_DEV  
 SOCKET_ENDPOINT_PROD
 
 By default this app runs with SOCKET_ENDPOINT_PROD which is a deployed heroku server. If you want to use local server then set the endpoint to SOCKET_ENDPOINT_DEV in CalculatorContext.js
