@@ -1,6 +1,6 @@
 import React from "react";
 
-const CalculatorResult = ({ result }) => {
+const Result = ({ result }) => {
   return (
     <div className="result">
       <p>{result}</p>
@@ -8,4 +8,4 @@ const CalculatorResult = ({ result }) => {
   );
 };
 
-export default CalculatorResult;
+export default Result;

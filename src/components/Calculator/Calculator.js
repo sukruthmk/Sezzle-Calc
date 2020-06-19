@@ -1,5 +1,5 @@
 import React from "react";
-import CalculatorResult from "./CalculatorResult";
+import Result from "./Result";
 import KeyPad from "./KeyPad";
 
 const { useState } = React;
@@ -39,7 +39,7 @@ const Calculator = () => {
   };
   return (
     <div>
-      <CalculatorResult result={result} />
+      <Result result={result} />
       <KeyPad onClick={onClick} />
     </div>
   );
