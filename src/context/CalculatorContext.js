@@ -1,13 +1,15 @@
-import React, { useState, createContext, useEffect } from "react";
+import React from "react";
 import io from "socket.io-client";
 const ENDPOINT = "http://127.0.0.1:4001";
 
-export const CalculatorContext = createContext();
+const { createContext, useEffect } = React;
+
+const CalculatorContext = createContext();
 
 const initialState = [];
 
 function reducer(state, action) {
-  const { msg } = action.payload;
+  const msg = action.payload;
   switch (action.type) {
     case "RECEIVE_MESSAGE":
       return [{ msg }, ...state];
@@ -18,13 +20,7 @@ function reducer(state, action) {
 
 let socket;
 
-const sendChat = (msg) => {
-  socket.emit("chat", msg);
-};
-
 const CalculatorProvider = (props) => {
-  const [calculationString, setCalculationString] = useState("");
-
   // reducer checks for local storage
   const [calculations, dispatch] = React.useReducer(
     reducer,
@@ -46,13 +42,18 @@ const CalculatorProvider = (props) => {
     });
   }
 
+  const sendChat = (msg) => {
+    socket.emit("chat", msg);
+    dispatch({ type: "RECEIVE_MESSAGE", payload: msg });
+  };
+
+  console.log("calculations", calculations);
+
   return (
     <CalculatorContext.Provider
       value={{
         calculations,
-        calculationString,
         sendChat,
-        setCalculationString,
       }}
     >
       {props.children}
@@ -60,4 +61,4 @@ const CalculatorProvider = (props) => {
   );
 };
 
-export default CalculatorProvider;
+export { CalculatorContext, CalculatorProvider };

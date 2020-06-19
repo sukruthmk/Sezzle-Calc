@@ -15,7 +15,7 @@ const MessageDisplay = Styled.div`
   text-align: left;
   font-size: 16px;
   font-weight: bold;
-  border-top: 1px black;
+  border-top: 1px solid black;
   @media (max-width: 500px) {
     width: 100%;
     max-height: 200px;

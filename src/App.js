@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
 import Calculator from "./components/Calculator/Calculator";
-import CalculatorProvider from "./context/CalculatorContext";
+import { CalculatorProvider } from "./context/CalculatorContext";
 import DisplayCalculations from "./components/Result/DisplayCalculations";
+import Styled from "styled-components";
+
+const DisplayContainer = Styled.div`
+    margin-top: 20px;
+`;
 
 function App() {
   return (
@@ -11,9 +16,9 @@ function App() {
       <div className="calculator-body">
         <Calculator />
       </div>
-      <div>
+      <DisplayContainer>
         <DisplayCalculations />
-      </div>
+      </DisplayContainer>
     </CalculatorProvider>
   );
 }

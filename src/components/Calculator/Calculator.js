@@ -1,10 +1,12 @@
 import React from "react";
 import Result from "./Result";
 import KeyPad from "./KeyPad";
+import { CalculatorContext } from "../../context/CalculatorContext";
 
-const { useState } = React;
+const { useContext, useState } = React;
 
 const Calculator = () => {
+  const { sendChat } = useContext(CalculatorContext);
   const [result, setResult] = useState("");
   const calculate = () => {
     var checkResult = "";
@@ -15,7 +17,11 @@ const Calculator = () => {
     }
     try {
       // eslint-disable-next-line no-eval
-      setResult((eval(checkResult) || "") + "");
+      const output = (eval(checkResult) || "") + "";
+      const calculation = result;
+      const calculationString = `${calculation} = ${output}`;
+      setResult(output);
+      sendChat(calculationString);
     } catch (e) {
       setResult("error");
     }
