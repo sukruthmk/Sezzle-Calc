@@ -8,6 +8,9 @@ const { useContext, useState } = React;
 const Calculator = () => {
   const { sendChat } = useContext(CalculatorContext);
   const [result, setResult] = useState("");
+
+  // function to calculate the result and
+  // also broadcast it to other users connected through socket
   const calculate = () => {
     var checkResult = "";
     if (result.includes("--")) {
@@ -26,12 +29,18 @@ const Calculator = () => {
       setResult("error");
     }
   };
+
+  // function to reset the calculator result to empty
   const reset = () => {
     setResult("");
   };
+
+  // function to remove last character
   const backspace = () => {
     setResult(result.slice(0, -1));
   };
+
+  // function to perfrom actions for different buttons in calculator
   const onClick = (button) => {
     if (button === "=") {
       calculate();
@@ -43,6 +52,7 @@ const Calculator = () => {
       setResult(result + button);
     }
   };
+
   return (
     <div>
       <Result result={result} />

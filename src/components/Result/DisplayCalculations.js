@@ -26,6 +26,7 @@ const DisplayCalculations = () => {
   const { calculations } = useContext(CalculatorContext);
   return (
     <MessageWrapper>
+      {/* Show only latest 10 calculations */}
       {calculations.slice(0, 10).map((calculation, i) => (
         <MessageDisplay value={calculation} key={i}>
           {calculation}
